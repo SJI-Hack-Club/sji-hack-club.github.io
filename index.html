@@ -21,12 +21,14 @@
         <a href="https://discord.gg/Rdtf6uySFY" class="link">Join us!</a>
         </div>
     </header>
-    <section id="intro">
-        <h1>What if you could make</h1>
-        <h1 class="highlight" id="ideas">...</h1>
-        <p>At SJI Hack Club, <b>it's possible.</b></p>
+    <section id="start">
+        <div id="intro">
+            <h1>What if you could make</h1>
+            <h1 class="highlight textCaro" id="ideas">...</h1>
+            <p>At SJI Hack Club, <b>it's possible.</b></p>
+        </div>
+        <image src="https://hc-cdn.hel1.your-objectstorage.com/s/v3/4af649f129c342f0485a050a8ec43b86484f83e6_sjihctransp.png" id="sjihclogo">
     </section>
-    <!-- <image src="https://hc-cdn.hel1.your-objectstorage.com/s/v3/4af649f129c342f0485a050a8ec43b86484f83e6_sjihctransp.png" id="sjihclogo"> -->
     <hr>
     <h2>A club where Josephians learn through projects</h2>
     <p>Students get to make projects and get grants for them, while learning new things along the way.</p>
@@ -45,15 +47,20 @@
             "a website for your class's football club",
             "a game where guns are umbrellas",
             "a sea-themed keyboard",
-            "an AI that helps you study"
+            "an AI that helps you study",
+            "an app that plans meetings with friends"
         ]
         let index = 1;
         const ideaText = document.getElementById("ideas");
         ideaText.innerText = ideas[0] + "?";
         const interval = setInterval(() => {
+            ideaText.classList.remove("textCaro");
+            void ideaText.offsetWidth; // Trigger reflow to restart animation
+            ideaText.style.animation = ""; // Reset animation
             ideaText.innerText = ideas[index] + "?"
             index++
             index%=ideas.length
+            ideaText.classList.add("textCaro");
         }, 2000)
     </script>
 </body>

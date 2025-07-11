@@ -22,9 +22,11 @@
         </div>
     </header>
     <section id="intro">
-        <h1>We are</h1>
-        <image src="https://hc-cdn.hel1.your-objectstorage.com/s/v3/4af649f129c342f0485a050a8ec43b86484f83e6_sjihctransp.png" id="sjihclogo">
+        <h1>What if you could make</h1>
+        <h1 class="highlight" id="ideas">...</h1>
+        <p>At SJI Hack Club, <b>it's possible.</b></p>
     </section>
+    <!-- <image src="https://hc-cdn.hel1.your-objectstorage.com/s/v3/4af649f129c342f0485a050a8ec43b86484f83e6_sjihctransp.png" id="sjihclogo"> -->
     <hr>
     <h2>A club where Josephians learn through projects</h2>
     <p>Students get to make projects and get grants for them, while learning new things along the way.</p>
@@ -37,5 +39,22 @@
         <a href="students.html">Our Students</a>
         <a href="experiences.html">Experiences</a>
     </nav>
+    <script>
+        const ideas = [
+            "an app that reminds your class to do homework",
+            "a website for your class's football club",
+            "a game where guns are umbrellas",
+            "a sea-themed keyboard",
+            "an AI that helps you study"
+        ]
+        let index = 1;
+        const ideaText = document.getElementById("ideas");
+        ideaText.innerText = ideas[0] + "?";
+        const interval = setInterval(() => {
+            ideaText.innerText = ideas[index] + "?"
+            index++
+            index%=ideas.length
+        }, 2000)
+    </script>
 </body>
 </html>

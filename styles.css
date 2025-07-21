@@ -154,7 +154,6 @@ main{
   background: var(--gradient-green);
 }
 footer {
-  padding:2rem;
   width: 100%;
   display: flex;
   justify-content: center;

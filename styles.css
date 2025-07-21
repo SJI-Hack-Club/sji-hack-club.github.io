@@ -35,11 +35,10 @@ body{
 }
 :root{
   --green: #006A51;
-  --gradient-green: linear-gradient(to bottom right, #00C99A, var(--green));
+  --gradient-green: linear-gradient(to bottom right, #00A780, var(--green));
 }
 #intro{
   padding: 2rem;
-  width: 60%;
   height: 90vh;
   display: flex;
   flex-direction: column;
@@ -49,12 +48,13 @@ body{
 }
 #sjihclogo{
   width: 30%;
-  height:fit-content;
+  height: auto;
   filter: drop-shadow(0 0 10vmin #fff);
 }
-#start{
+.textImage{
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
 .highlight{
   background-image: var(--gradient-green);
@@ -88,7 +88,7 @@ header{
   background: var(--gradient-green);
   border-radius: 2vmin;
 }
-header div{
+header div, nav{
   display: flex;
   align-items: center;
   padding-right: 1rem;
@@ -105,33 +105,8 @@ p a:hover{
   text-decoration-color: #fff;
   color: var(--green);
 }
-nav{
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  gap: 5vw;
-
-}
-nav a{
-    height: 10vh;
-    width: 20vw;
+.block {
     background: var(--gradient-green);
-    border-radius: 2vmin;
-    color: #fff;
-    text-decoration: none;
-    font-size: 1em;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: background-color 0.3s ease, color 0.3s ease;
-    text-align: center;
-}
-nav a:hover{
-    background: linear-gradient(to bottom right, white, white);
-    color: var(--green);
-}
-.project {
-    background-color: var(--green);
     border-radius: 10px;
     text-decoration: none;  
     color: white;  
@@ -146,15 +121,19 @@ nav a:hover{
     box-shadow: 5px 10px #fff;
     transition: all 0.5s;
 }
-.projects {
+.block img{
+  width: 30vmin;
+}
+.blocks {
     display: flex;
     flex-wrap: wrap;
     margin: 5vmin;
+    justify-content: center;
 }
-.project:hover{
+.block:hover{
     box-shadow: -5px 10px #fff;
 }
-.link{
+nav a{
   background-color: #fff;
   color: var(--green);
   text-decoration: none;
@@ -162,4 +141,22 @@ nav a:hover{
   height: 1rem;
   padding: 1rem;
   text-align: center;
+  margin-left: 1rem;
+}
+main{
+  padding: 1rem;
+}
+.joinButton {
+  font-size: 4rem;
+  text-decoration: none;
+  color: #fff;
+  padding: 1rem;
+  background: var(--gradient-green);
+}
+footer {
+  padding:2rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

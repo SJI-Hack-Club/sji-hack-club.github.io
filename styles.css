@@ -37,9 +37,12 @@ body{
   --green: #006A51;
   --gradient-green: linear-gradient(to bottom right, #00A780, var(--green));
 }
+.start{
+  min-height: 100vh;
+  width: 100%;
+}
 #intro{
-  padding: 2rem;
-  height: 100vh;
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center; 
@@ -78,15 +81,15 @@ body{
 }
 header{
   width: calc(100% - 2rem);
-  position: fixed;
-  top: 1rem;
-  left: 1rem;
+  position: sticky;
+  top: 0;
+  left: 0;
   z-index: 1000;
   display: flex;
   justify-content: space-between;
   background: var(--gradient-green);
   border-radius: 2vmin;
-  padding: 1rem 0;
+  margin: 1rem;
 }
 header div, nav{
   display: flex;
